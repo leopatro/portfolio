@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Criação de landing pages de alta conversão e automações inteligentes para alavancar seu negócio online. Aumente suas vendas em até 250%.">
+    <meta name="keywords" content="landing page, automação, marketing digital, conversão, vendas online">
+    <meta name="author" content="Landing Pages Premium">
+    <meta property="og:title" content="Landing Pages Premium & Automações">
+    <meta property="og:description" content="Transforme visitantes em clientes com landing pages de alta conversão">
+    <meta property="og:type" content="website">
+    <title>Landing Pages Premium & Automações | Transforme Seu Negócio Digital</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
+        
+
+        :root {
+            --bg-primary: #07070c;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a28;
+            --purple-primary: #8B5CF6;
+            --purple-secondary: #A78BFA;
+            --purple-dark: #6D28D9;
+            --text-primary: #f8f9fa;
+            --text-secondary: #a8a8b8;
+            --border-color: rgba(139, 92, 246, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #07070c;
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        }
+
+        /* ========== BACKGROUND GLOBAL ========== */
+        .global-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background: linear-gradient(#07070c, #0a0a14 60%, #07070c);
+        }
+
+        /* ========== PARTÍCULAS ========== */
+        #particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, var(--purple-primary) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float-particle linear infinite;
+            will-change: transform, opacity;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.15;
+            }
+            90% {
+                opacity: 0.15;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* ========== LAYOUT BASE ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+
+        section {
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* ========== SISTEMA DE DEGRADÊ ENTRE SEÇÕES ========== */
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(
+                to bottom, 
+                rgba(7, 7, 12, 1) 0%,
+                rgba(7, 7, 12, 0.98) 8%,
+                rgba(7, 7, 12, 0.95) 15%,
+                rgba(7, 7, 12, 0.88) 25%,
+                rgba(7, 7, 12, 0.75) 38%,
+                rgba(7, 7, 12, 0.55) 52%,
+                rgba(7, 7, 12, 0.35) 68%,
+                rgba(7, 7, 12, 0.15) 82%,
+                transparent 100%
+            );
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(
+                to top, 
+                rgba(7, 7, 12, 1) 0%,
+                rgba(7, 7, 12, 0.98) 8%,
+                rgba(7, 7, 12, 0.95) 15%,
+                rgba(7, 7, 12, 0.88) 25%,
+                rgba(7, 7, 12, 0.75) 38%,
+                rgba(7, 7, 12, 0.55) 52%,
+                rgba(7, 7, 12, 0.35) 68%,
+                rgba(7, 7, 12, 0.15) 82%,
+                transparent 100%
+            );
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: 
+            linear-gradient(rgba(5,8,20,0.85), rgba(5,8,20,0.85)),
+            url('/assets/Gemini_Generated_Image_gfbcotgfbcotgfbc.png') center/cover no-repeat;
+            background-attachment: scroll;
+            position: relative;
+            width: 100%;
+        }
+        
+
+        .hero::before {
+            display: none;
+        }
+
+        .hero > .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(7, 7, 12, 0.45);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 100%;
+            padding: 0 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.75rem, 5vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            position: relative;
+            cursor: default;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .hero h1::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                        rgba(139, 92, 246, 0.4) 0%, 
+                        rgba(139, 92, 246, 0.2) 20%, 
+                        transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            border-radius: 20px;
+            filter: blur(4.5rem);
+        }
+
+        .hero h1:hover::before {
+            opacity: 1;
+        }
+
+        .hero h1 .word {
+            display: inline-block;
+            opacity: 0;
+            background: linear-gradient(135deg, var(--purple-secondary) 0%, var(--purple-primary) 50%, var(--purple-dark) 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0 4px;
+            transform: translateX(0);
+            position: relative;
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero h1:hover .word {
+            filter: brightness(1.3) drop-shadow(0 0 20px rgba(139, 92, 246, 0.6));
+            transform: translateY(-2px);
+        }
+
+        .hero h1 .word:hover {
+            filter: brightness(1.5) drop-shadow(0 0 30px rgba(139, 92, 246, 0.9));
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        .hero h1 .word:nth-child(odd) {
+            animation: slide-from-left 0.8s ease-out forwards, gradient-shift 8s ease-in-out 1.2s infinite;
+        }
+
+        .hero h1 .word:nth-child(even) {
+            animation: slide-from-right 0.8s ease-out forwards, gradient-shift 8s ease-in-out 1.2s infinite;
+        }
+
+        .hero h1 .word:nth-child(1) { animation-delay: 0s, 1.2s; }
+        .hero h1 .word:nth-child(2) { animation-delay: 0.15s, 1.2s; }
+        .hero h1 .word:nth-child(3) { animation-delay: 0.3s, 1.2s; }
+        .hero h1 .word:nth-child(4) { animation-delay: 0.45s, 1.2s; }
+        .hero h1 .word:nth-child(5) { animation-delay: 0.6s, 1.2s; }
+        .hero h1 .word:nth-child(6) { animation-delay: 0.75s, 1.2s; }
+        .hero h1 .word:nth-child(7) { animation-delay: 0.9s, 1.2s; }
+        .hero h1 .word:nth-child(8) { animation-delay: 1.05s, 1.2s; }
+        .hero h1 .word:nth-child(9) { animation-delay: 1.2s, 1.2s; }
+        .hero h1 .word:nth-child(10) { animation-delay: 1.35s, 1.2s; }
+        .hero h1 .word:nth-child(11) { animation-delay: 1.5s, 1.2s; }
+        .hero h1 .word:nth-child(12) { animation-delay: 1.65s, 1.2s; }
+
+        .hero h1 .word.scroll-out {
+            animation: none !important;
+            opacity: 0;
+            transform: translateY(100vh) rotate(20deg);
+            transition: opacity 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                        transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .hero h1 .word.scroll-back {
+            animation: none !important;
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes slide-from-left {
+            0% {
+                opacity: 0;
+                transform: translateX(-80px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-from-right {
+            0% {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 1;
+            transform: translateY(0);
+            padding: 0 8px;
+        }
+
+        .hero p.scroll-out {
+            opacity: 0 !important;
+            transform: translateY(100vh) rotate(15deg) !important;
+            transition: opacity 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                        transform 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .hero p.scroll-back {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            transition: opacity 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .hero .cta-button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero .cta-button.scroll-out {
+            opacity: 0 !important;
+            transform: translateY(100vh) rotate(10deg) !important;
+            transition: opacity 1.6s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                        transform 1.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .hero .cta-button.scroll-back {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            transition: opacity 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        transform 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ========== BOTÕES CTA ========== */
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-dark) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+            border-color: var(--purple-secondary);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* ========== TÍTULOS DE SEÇÃO ========== */
+        .section-title {
+            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--purple-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+            word-wrap: break-word;
+            padding: 0 8px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin-bottom: 48px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 16px;
+            line-height: 1.6;
+        }
+
+        /* ========== SEÇÃO CONTATO ========== */
+        /* ========== SEÇÃO CONTATO ========== */
+.contact-section {
+    position: relative;
+    background: url('./assets/IMAGEM44.png') center/cover no-repeat;
+    background-attachment: scroll;
+}
+
+.contact-section > .contact-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 7, 12, 0.55);
+    z-index: 1;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    padding: 40px 24px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all 0.3s ease;
+    font-family: inherit;
+    touch-action: manipulation;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* =================== CUSTOM SELECT =================== */
+    .custom-select {
+        position: relative;
+        width: 100%;
+        font-family: inherit;
+    }
+
+    .custom-select .selected {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .custom-select .selected:focus {
+        outline: none;
+        border-color: var(--purple-primary);
+        box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+
+    .custom-select .options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-secondary);
+        border: 1px solid var(--purple-primary);
+        border-radius: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 10;
+    }
+
+    .custom-select .options li {
+        padding: 12px 16px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .custom-select .options li:hover {
+        background: rgba(139, 92, 246, 0.2); /* hover roxo */
+    }
+
+    /* =================== BOTÃO =================== */
+    .submit-button {
+        width: 100%;
+        padding: 16px;
+        background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-dark) 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .submit-button:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+    }
+
+    .submit-button:active:not(:disabled) {
+        transform: translateY(0);
+    }
+
+    .submit-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .form-message {
+        display: none;
+        padding: 16px;
+        border-radius: 10px;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: 500;
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .form-message.success {
+        background: rgba(34, 197, 94, 0.1);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        color: #22c55e;
+    }
+
+    .form-message.error {
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        color: #ef4444;
+    }
+
+
+        /* ========== SEÇÃO SOBRE ========== */
+        #sobre {
+            position: relative;
+            background-attachment: scroll;
+        }
+
+        #sobre > .sobre-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(7, 7, 12, 0.5);
+            z-index: 1;
+        }
+
+        /* ========== SEÇÃO SERVIÇOS ========== */
+        #servicos {
+            position: relative;
+            background: url('./assets/IMAGEM44.png') center/cover no-repeat;
+            background-attachment: scroll;
+        }
+
+        #servicos > .servicos-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(7, 7, 12, 0.9);
+            z-index: 1;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+            width: 100%;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 32px 24px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--purple-primary), var(--purple-secondary));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--purple-primary);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+            background:
+                radial-gradient(circle at 30% 30%, rgba(139,92,246,.45), transparent 60%),
+                linear-gradient(135deg, rgba(139,92,246,.18), rgba(167,139,250,.18));
+
+            backdrop-filter: blur(8px);
+            box-shadow:
+                0 0 0 1px rgba(139,92,246,.35),
+                0 0 25px rgba(139,92,246,.25);
+        }
+
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: #c4b5fd;
+            filter: drop-shadow(0 0 10px rgba(139,92,246,.6));
+            transition: .35s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .service-card:hover .service-icon {
+            box-shadow:
+                0 0 0 1px rgba(139,92,246,.55),
+                0 0 45px rgba(139,92,246,.55);
+        }
+
+        .service-card:hover svg {
+            transform: scale(1.15);
+        }
+
+        .service-card h3 {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        /* ========== SEÇÃO BENEFÍCIOS ========== */
+        #beneficios {
+            position: relative;
+            background: url('./assets/IMAGEM\ 3.png') center/cover no-repeat;
+            background-attachment: scroll;
+        }
+
+        #beneficios > .beneficios-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(9, 9, 15, 0.90);
+            z-index: 1;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+            width: 100%;
+        }
+
+        .benefit-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+
+        .benefit-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background:
+                radial-gradient(circle at 30% 30%, rgba(139,92,246,.45), transparent 60%),
+                linear-gradient(135deg, rgba(139,92,246,.16), rgba(167,139,250,.16));
+            backdrop-filter: blur(6px);
+            box-shadow:
+                0 0 0 1px rgba(139,92,246,.35),
+                0 0 22px rgba(139,92,246,.25);
+        }
+
+        .benefit-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: #c4b5fd;
+            filter: drop-shadow(0 0 8px rgba(139,92,246,.6));
+            transition: .35s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .benefit-item:hover .benefit-icon {
+            box-shadow:
+                0 0 0 1px rgba(139,92,246,.55),
+                0 0 40px rgba(139,92,246,.45);
+        }
+
+        .benefit-item:hover svg {
+            transform: scale(1.15);
+        }
+
+
+        .benefit-item h3 {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .benefit-item p {
+            color: var(--text-secondary);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            line-height: 1.6;
+        }
+
+        .services-cta {
+            margin-top: 90px;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-arrow {
+            width: 38px;
+            height: 38px;
+            margin-bottom: 18px;
+            animation: arrowFloat 1.8s infinite ease-in-out;
+        }
+
+        .cta-arrow svg {
+            width: 100%;
+            height: 100%;
+            fill: #a78bfa;
+            filter: drop-shadow(0 0 14px rgba(139,92,246,.65));
+        }
+
+        @keyframes arrowFloat {
+            0%   { transform: translateY(-2px); }
+            50%  { transform: translateY(-14px); }
+            100% { transform: translateY(-2px); }
+        }
+
+
+        /* ========== SEÇÃO PORTFÓLIO ========== */
+        #portfolio {
+            position: relative;
+            background: url('./assets/IMAGEM44.png') center/cover no-repeat;
+            background-attachment: scroll;
+        }
+
+        #portfolio > .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(7, 7, 12, 0.9);
+            z-index: 1;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+            width: 100%;
+        }
+
+        .portfolio-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+            border-color: var(--purple-primary);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple-primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: clamp(3rem, 8vw, 4rem);
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .portfolio-content {
+            padding: 24px;
+        }
+
+        .portfolio-content h3 {
+            font-size: clamp(1.2rem, 3vw, 1.4rem);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .portfolio-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            line-height: 1.6;
+        }
+
+        .portfolio-tag {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: clamp(0.8rem, 2vw, 0.85rem);
+            color: var(--purple-secondary);
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 36px;
+            margin-top: 56px;
+        }
+
+        .portfolio-card {
+            background: linear-gradient(180deg, rgba(139,92,246,.06), rgba(139,92,246,.01));
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(139,92,246,.25);
+            transition: .5s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 80px rgba(139,92,246,.35);
+        }
+
+        .portfolio-mockup {
+            background: radial-gradient(circle at 30% 20%, rgba(139,92,246,.25), transparent 70%);
+            padding: 26px;
+        }
+
+        .portfolio-mockup img {
+            width: 100%;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 20px 50px rgba(0,0,0,.6);
+        }
+
+        .portfolio-content {
+            padding: 28px;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .portfolio-tag {
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(139,92,246,.12);
+            color: #c4b5fd;
+            font-size: .8rem;
+        }
+
+
+        /* ========== CTA FINAL ========== */
+        .cta-final {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+            background: 
+                linear-gradient(rgba(10,10,20,0.90), rgba(10,10,20,0.90)),
+                url("./assets/Gemini_Generated_Image_oiyi57oiyi57oiyi.png") center/cover no-repeat;
+            background-attachment: scroll;
+        }
+
+        .cta-final h2 {
+            font-size: clamp(1.75rem, 5vw, 3.5rem);
+            margin-bottom: 16px;
+            color: #fff;
+            text-shadow: 0 10px 30px rgba(85, 6, 232, 0.9);
+            line-height: 1.5;
+            padding: 0 8px;
+        }
+
+        .cta-final p {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: #e0e0e0;
+            margin-bottom: 32px;
+            padding: 0 8px;
+            line-height: 1.5;
+        }
+
+        /* ========== SOBRE ========== */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--bg-primary);
+            padding: 85px 20px 15px;
+            position: relative;
+            width: 100%;
+        }
+
+        footer::after {
+            display: none;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 32px auto 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 16px;
+            font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+            line-height: 1.2;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            line-height: 1.5;
+        }
+
+        .footer-section a:hover {
+            color: var(--purple-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            max-width: 1100px;
+            margin: 0 auto;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+
+        .footer-logo {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            padding: 14px 24px;
+        }
+
+        .footer-logo img {
+            max-width: clamp(90px, 22vw, 140px);
+            height: auto;
+            display: block;
+        }
+
+        /* ========== ANIMAÇÕES DE REVEAL ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px) scale(0.97);
+            filter: blur(4px);
+            transition: opacity 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        filter 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+            filter: none;
+        }
+
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-80px) scale(0.97);
+            filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        filter 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            filter: none;
+        }
+
+        .fade-right {
+            opacity: 0;
+            transform: translateX(80px) scale(0.97);
+            filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        filter 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .fade-right.visible {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            filter: none;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(80px) scale(0.97);
+            filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        filter 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: none;
+        }
+
+        .fade-zoom {
+            opacity: 0;
+            transform: scale(0.8);
+            filter: blur(6px);
+            transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        transform 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+                        filter 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .fade-zoom.visible {
+            opacity: 1;
+            transform: scale(1);
+            filter: none;
+        }
+
+        .domino > * {
+            opacity: 0;
+            transform: translateY(40px) scale(0.97);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .domino.visible > * {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .domino.visible > *:nth-child(1) { transition-delay: 0.05s; }
+        .domino.visible > *:nth-child(2) { transition-delay: 0.15s; }
+        .domino.visible > *:nth-child(3) { transition-delay: 0.25s; }
+        .domino.visible > *:nth-child(4) { transition-delay: 0.35s; }
+        .domino.visible > *:nth-child(5) { transition-delay: 0.45s; }
+        .domino.visible > *:nth-child(6) { transition-delay: 0.55s; }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ========== RESPONSIVO TABLET ========== */
+        @media (max-width: 900px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .services-grid,
+            .benefits-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .container {
+                padding: 60px 20px;
+            }
+
+            section::before,
+            section::after {
+                height: 150px;
+            }
+        }
+
+        /* ========== RESPONSIVO MOBILE ========== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 50px 16px;
+            }
+
+            .contact-form {
+                padding: 32px 20px;
+            }
+
+            .services-grid,
+            .benefits-grid,
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero {
+                min-height: 100vh;
+                min-height: 100dvh;
+            }
+
+            .hero h1 .word {
+                margin: 0 2px;
+            }
+
+            .cta-button {
+                padding: 14px 32px;
+                animation: pulseCta 2.5s infinite;
+            }
+
+            @keyframes pulseCta {
+                0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+                70% { box-shadow: 0 0 0 18px rgba(139, 92, 246, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .domino > * {
+                transform: translateY(50px) scale(0.95);
+                filter: blur(3px);
+            }
+
+            .domino.visible > * {
+                filter: blur(0);
+            }
+
+            .particle {
+                opacity: 0.08;
+                filter: blur(1px);
+            }
+
+            section::before,
+            section::after {
+                height: 120px;
+            }
+
+            .service-card,
+            .portfolio-card {
+                transition: all 0.3s ease;
+            }
+
+            .service-card:hover,
+            .portfolio-card:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* ========== RESPONSIVO PEQUENO ========== */
+        @media (max-width: 520px) {
+            .footer-content {
+                text-align: center;
+            }
+
+            .footer-section {
+                align-items: center;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                padding: 0 12px;
+            }
+
+            .section-title,
+            .section-subtitle {
+                padding: 0 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 12px;
+            }
+
+            .contact-form {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+
+            .service-card {
+                padding: 24px 16px;
+            }
+
+            .benefit-item {
+                padding: 20px 12px;
+            }
+
+            .portfolio-content {
+                padding: 20px 16px;
+            }
+
+            .cta-final {
+                padding: 60px 16px;
+            }
+
+            footer {
+                padding: 75px 16px 12px;
+            }
+
+            .footer-logo img {
+                max-width: 80px;
+                margin-bottom: 4.5rem;
+            }
+        }
+
+        /* ========== MELHORIAS TOUCH ========== */
+        @media (hover: none) and (pointer: coarse) {
+            .hero h1:hover .word {
+                filter: none;
+                transform: none;
+            }
+
+            .hero h1 .word:hover {
+                filter: none;
+                transform: none;
+            }
+
+            .cta-button:active,
+            .submit-button:active {
+                transform: scale(0.96);
+                box-shadow: 0 8px 20px rgba(139, 92, 246, 0.45);
+            }
+
+            .service-card:active,
+            .portfolio-card:active {
+                transform: scale(0.97);
+                border-color: var(--purple-primary);
+                box-shadow: 0 12px 40px rgba(139, 92, 246, 0.35);
+            }
+
+            .service-card:hover,
+            .portfolio-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+
+        /* ========== PERFORMANCE ========== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .particle {
+                display: none;
+            }
+        }
+
+        /* ========== ORIENTAÇÃO LANDSCAPE MOBILE ========== */
+      .hero h1 {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        font-weight: 900;
+        text-align: center;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        padding: 0 8px;
+        background: linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #e0d4ff 15%,
+            #8B5CF6 35%,
+            #A78BFA 50%,
+            #8B5CF6 65%,
+            #e0d4ff 85%,
+            #ffffff 100%
+        );
+        background-size: 300% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        animation: gradientShift 8s ease-in-out infinite;
+        text-shadow: 
+            0 0 40px rgba(139, 92, 246, 0.4),
+            0 0 80px rgba(139, 92, 246, 0.2);
+        filter: drop-shadow(0 4px 20px rgba(139, 92, 246, 0.3));
+    }
+
+    /* Brilho sutil de fundo */
+    .hero h1::before {
+        content: '';
+        position: absolute;
+        inset: -10px;
+        background: radial-gradient(
+            ellipse 120% 80% at 50% 50%,
+            rgba(139, 92, 246, 0.15),
+            transparent 70%
+        );
+        z-index: -1;
+        animation: pulse 3s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+
+    /* Cada palavra individual com delay */
+    .hero h1 .word {
+        display: inline-block;
+        animation: wordFloat 3s ease-in-out infinite;
+        animation-delay: calc(var(--word-index, 0) * 0.1s);
+    }
+
+    /* Animações */
+    @keyframes gradientShift {
+        0%, 100% { 
+            background-position: 0% 50%;
+            filter: drop-shadow(0 4px 20px rgba(139, 92, 246, 0.3));
+        }
+        50% { 
+            background-position: 100% 50%;
+            filter: drop-shadow(0 6px 30px rgba(167, 139, 250, 0.5));
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% { 
+            opacity: 0.4;
+            transform: scale(1);
+        }
+        50% { 
+            opacity: 0.7;
+            transform: scale(1.05);
+        }
+    }
+
+    @keyframes wordFloat {
+        0%, 100% { 
+            transform: translateY(0px);
+        }
+        50% { 
+            transform: translateY(-3px);
+        }
+    }
+
+    /* Adiciona índice nas palavras via JS (opcional) */
+    .hero h1 .word:nth-child(1) { --word-index: 0; }
+    .hero h1 .word:nth-child(2) { --word-index: 1; }
+    .hero h1 .word:nth-child(3) { --word-index: 2; }
+    .hero h1 .word:nth-child(4) { --word-index: 3; }
+    .hero h1 .word:nth-child(5) { --word-index: 4; }
+    .hero h1 .word:nth-child(6) { --word-index: 5; }
+    .hero h1 .word:nth-child(7) { --word-index: 6; }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="global-bg"></div>
+    <div id="particles-bg"></div>
+
+    <section class="hero" role="banner">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content reveal">
+                <h1>Transforme Visitantes em Clientes com Landing Pages de Alta Conversão</h1>
+                <p>Criamos landing pages premium e automações inteligentes que impulsionam seus resultados e elevam seu negócio digital a outro nível.</p>
+                <a href="https://wa.me/5551981657701?text=Olá! Quero transformar meu negócio com uma landing page premium" class="cta-button" target="_blank" rel="noopener">Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+        <div class="contact-overlay"></div>
+        <div class="container">
+            <div class="reveal">
+                <h2 id="contact-title" class="section-title">Solicite Seu Orçamento Gratuito</h2>
+                <p class="section-subtitle">Preencha o formulário abaixo e receba uma proposta personalizada em até 24 horas</p>
+
+                <form class="contact-form"
+                    id="contactForm"
+                    aria-label="Formulário de contato"
+                    action="https://formspree.io/f/mykzrdqp"
+                    method="POST">
+
+                    <!-- Redirecionamento após envio -->
+                    <input type="hidden" name="_next" value="obrigado.html">
+
+                    <!-- Honeypot anti-bot -->
+                    <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none">
+
+                    <!-- Nome -->
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                    </div>
+
+                    <!-- Telefone / WhatsApp -->
+                    <div class="form-group">
+                        <label for="phone">Telefone / WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel">
+                    </div>
+
+                    <!-- Select customizado -->
+                    <div class="form-group">
+                        <label for="service">Serviço de Interesse *</label>
+                        <div class="custom-select" tabindex="0">
+                            <div class="selected">Selecione uma opção</div>
+                            <ul class="options">
+                                <li data-value="Landing Page Premium">Landing Page Premium</li>
+                                <li data-value="Automação de Marketing">Automação de Marketing</li>
+                                <li data-value="Landing Page + Automação">Landing Page + Automação</li>
+                                <li data-value="Consultoria Digital">Consultoria Digital</li>
+                                <li data-value="Outro">Outro</li>
+                            </ul>
+                            <input type="hidden" id="service" name="service" required>
+                        </div>
+                    </div>
+
+                    <!-- Mensagem -->
+                    <div class="form-group">
+                        <label for="message">Conte-nos sobre seu projeto</label>
+                        <textarea id="message" name="message" rows="4" aria-label="Mensagem sobre o projeto"></textarea>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <button type="submit" class="submit-button" id="submitBtn">
+                        Enviar Solicitação
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" aria-labelledby="about-title">
+        <div class="sobre-overlay"></div>
+        <div class="container">
+            <div class="fade-left">
+                <h2 id="about-title" class="section-title">Sobre Nossos Serviços</h2>
+                <div class="about-content">
+                    <p>Transformamos sua presença digital em uma máquina de conversão. Combinamos design estratégico, psicologia de vendas e tecnologia avançada para criar landing pages que capturam atenção, constroem confiança e convertem visitantes em clientes reais.</p>
+                    <p>Cada elemento é pensado para guiar seu público até a ação desejada. Com automações inteligentes trabalhando 24/7, você escala seus resultados enquanto economiza tempo e recursos, transformando cada clique em oportunidade de negócio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" aria-labelledby="services-title">
+        <div class="servicos-overlay"></div>
+
+        <div class="container">
+            <div class="fade-up">
+                <h2 id="services-title" class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Soluções completas para elevar sua presença digital</p>
+
+                <div class="services-grid domino">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8 6 7 10 7 14l-3 3 4-1c1 2 2 3 4 3s3-1 4-3l4 1-3-3c0-4-1-8-5-12z"/></svg>
+                        </div>
+                        <h3>Landing Pages que Convertem</h3>
+                        <p>Design exclusivo criado sob medida para sua marca. Cada elemento estrategicamente posicionado para capturar atenção, transmitir credibilidade e transformar visitantes em leads qualificados.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+                        </div>
+                        <h3>Automação & Integração Inteligente</h3>
+                        <p>Sistemas automatizados que trabalham por você 24/7: nutrição de leads no piloto automático, e-mails personalizados disparados no momento certo e integração total com CRMs, WhatsApp e redes sociais. Gestão centralizada que libera seu tempo para focar no que realmente importa: vender mais.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM7 17h2V9H7zm4 0h2V5h-2zm4 0h2v-6h-2z"/></svg>
+                        </div>
+                        <h3>Dashboards & Análise de Dados</h3>
+                        <p>Transforme planilhas complexas em dashboards visuais intuitivos que revelam insights estratégicos. Recebo seus CSVs e dados brutos e crio relatórios interativos que facilitam a tomada de decisão, identificam padrões ocultos e destacam oportunidades de crescimento. Visualize seus números de forma clara e tome decisões baseadas em dados reais.</p>
+                    </article>
+                </div>
+
+                <div class="services-cta">
+                    <div class="cta-arrow">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 16l6-6H6z"/>
+                        </svg>
+                    </div>
+
+                    <a href="https://wa.me/5551981657701?text=Olá! Quero transformar meu negócio com uma landing page premium"
+                    class="cta-button"
+                    target="_blank"
+                    rel="noopener">
+                    Começar Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="beneficios" aria-labelledby="benefits-title">
+        <div class="beneficios-overlay"></div>
+        <div class="container">
+            <div class="fade-right">  
+                <h2 id="benefits-title" class="section-title">Por Que Escolher Nossos Serviços?</h2>
+                <p class="section-subtitle">Diferenciais que fazem a diferença nos seus resultados</p>
+            </div>
+            <div class="fade-zoom">   
+                <div class="benefits-grid">
+                    <article class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9.5 16.2L4.8 11.5l-1.4 1.4L9.5 19 21 7.5l-1.4-1.4z"/></svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Foco em Resultados</h3>
+                            <p>Cada projeto é desenvolvido com estratégias comprovadas de mercado para maximizar conversões e impulsionar seu crescimento digital</p>
+                        </div>
+                    </article>
+
+                    <article class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9 4l-2 1 1 2-2 2-2-1-1 2h-2l-1-2-2 1-2-2 1-2-2-1v-2l2-1-1-2 2-2 2 1 1-2h2l1 2 2-1 2 2-1 2 2 1z"/></svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Metodologia Ágil</h3>
+                            <p>Entrega ágil com qualidade premium. Você recebe seu projeto completo, funcional e pronto para gerar resultados imediatos</p>
+                        </div>
+                    </article>
+
+                    <article class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16v12H7l-3 3z"/></svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Atendimento Exclusivo</h3>
+                            <p>Você tem acesso direto a mim durante todo o projeto. Sem intermediários, sem burocracia, apenas soluções rápidas e alinhamento total para entregar exatamente o que vai fazer seu negócio decolar</p>
+                        </div>
+                    </article>
+
+                    <article class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7v4h2V4h-8v2h4l-5 5-4-4-8 8z"/></svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Investimento Inteligente</h3>
+                            <p>Cada real investido se transforma em uma ferramenta que trabalha para você 24/7, capturando leads e gerando oportunidades de negócio enquanto você dorme</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" aria-labelledby="portfolio-title">
+        <div class="portfolio-overlay"></div>
+        <div class="container">
+            <div class="reveal">
+                <h2 id="portfolio-title" class="section-title">Projetos de Sucesso</h2>
+                <p class="section-subtitle">Confira alguns dos nossos trabalhos</p>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="./assets/mockup-ecommerce.png" alt="Sistema de e-commerce">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>E-commerce de Moda</h3>
+                            <p>Landing page para lançamento de coleção que gerou 180% de aumento nas vendas em 30 dias.</p>
+                            <span class="portfolio-tag">E-commerce</span>
+                            <span class="portfolio-tag">Alta Conversão</span>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="./assets/Ad2ebc3d95c714f3294fba07d665bb7b8V.png" alt="Sistema de e-commerce">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Infoproduto Digital</h3>
+                            <p>Página de vendas com automação completa que converteu mais de 1.000 leads em 60 dias.</p>
+                            <span class="portfolio-tag">Infoproduto</span>
+                            <span class="portfolio-tag">Automação</span>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="./assets/MP.PNG" alt="Sistema de e-commerce">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Academia & Personal Trainer</h3>
+                            <p>Landing page de captura com agendamento de avaliação física e planos personalizados integrados.</p>
+                            <span class="portfolio-tag">Saúde</span>
+                            <span class="portfolio-tag">Agendamento</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <div class="reveal">
+                <h2>Pronto Para Transformar Seu Negócio?</h2>
+                <p>Entre em contato agora e receba uma consultoria gratuita personalizada</p>
+                <a href="https://wa.me/5551981657701?text=Quero uma consultoria gratuita sobre landing pages e automações" class="cta-button" target="_blank" rel="noopener">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="./assets/logo7.png" alt="Logo Landing Pages Premium">
+            </div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre</h3>
+                    <p>Especialistas em landing pages de alta conversão e automações inteligentes para negócios digitais.</p>
+                </div>
+
+                <nav class="footer-section" aria-label="Serviços">
+                    <h3>Serviços</h3>
+                    <a href="#servicos">Landing Pages</a>
+                    <a href="#servicos">Automações</a>
+                    <a href="#servicos">Otimização</a>
+                    <a href="#servicos">Consultoria</a>
+                </nav>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <a href="https://wa.me/5551981657701" target="_blank" rel="noopener">WhatsApp: (51) 98165-7701</a>
+                    <a href="#contato">Formulário de Contato</a>
+                </div>
+
+                <nav class="footer-section" aria-label="Links úteis">
+                    <h3>Links Úteis</h3>
+                    <a href="#portfolio">Portfólio</a>
+                    <a href="#beneficios">Diferenciais</a>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Landing Pages Premium. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ==================== UTILITY FUNCTIONS (ESCOPO GLOBAL) ====================
+        
+        // Remove erro do campo
+        function removeFieldError(field) {
+            const container = field.closest('.form-group') || field.closest('.custom-select');
+            if (!container) return;
+
+            field.classList.remove('error');
+            container.classList.remove('error');
+
+            const errorDiv = container.querySelector('.field-error');
+            if (errorDiv) errorDiv.remove();
+        }
+
+        // Mostra erro no campo
+        function showFieldError(field, message) {
+            const container = field.closest('.form-group') || field.closest('.custom-select');
+            if (!container) return;
+
+            // Remove erro anterior
+            removeFieldError(field);
+
+            // Adiciona classe de erro
+            field.classList.add('error');
+            container.classList.add('error');
+
+            // Cria mensagem de erro
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'field-error';
+            errorDiv.textContent = message;
+            container.appendChild(errorDiv);
+        }
+
+        // ==================== PARTICLES ====================
+        function createParticles() {
+            const container = document.getElementById('particles-bg');
+            if (!container) return;
+
+            const fragment = document.createDocumentFragment();
+            const particleCount = window.innerWidth < 768 ? 30 : 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+
+                const size = Math.random() * 4 + 2;
+                const startX = Math.random() * 100;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+
+                particle.style.cssText = `
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${startX}%;
+                    animation-duration: ${duration}s;
+                    animation-delay: ${delay}s;
+                `;
+
+                fragment.appendChild(particle);
+            }
+
+            container.appendChild(fragment);
+        }
+
+        // ==================== HERO ====================
+        function initializeHero() {
+            const h1 = document.querySelector('.hero h1');
+            if (!h1) return;
+
+            const text = h1.textContent.trim();
+            const words = text.split(/\s+/);
+            h1.innerHTML = words.map(word => 
+                `<span class="word">${word}</span>`
+            ).join(' ');
+
+            const heroContent = document.querySelector('.hero-content');
+            setTimeout(() => {
+                if (heroContent) heroContent.classList.add('visible');
+            }, 100);
+        }
+
+        // ==================== INTERSECTION OBSERVER ====================
+        function initializeObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -10% 0px'
+            });
+
+            document.querySelectorAll('.reveal, .domino, .fade-left, .fade-right, .fade-up, .fade-zoom').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // ==================== HERO GLOW ====================
+        function initializeHeroGlow() {
+            const heroH1 = document.querySelector('.hero h1');
+            if (!heroH1) return;
+
+            heroH1.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                
+                this.style.setProperty('--mouse-x', x + '%');
+                this.style.setProperty('--mouse-y', y + '%');
+            });
+        }
+
+        // ==================== SCROLL EFFECTS ====================
+        function initializeScrollEffects() {
+            const heroContent = document.querySelector('.hero-content');
+            const words = document.querySelectorAll('.hero h1 .word');
+            const paragraph = document.querySelector('.hero p');
+            const button = document.querySelector('.hero .cta-button');
+            
+            if (!words.length || !heroContent) return;
+
+            const SCROLL_THRESHOLD = 100;
+            let animationFrameId = null;
+            let isScrolledOut = false;
+
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > SCROLL_THRESHOLD && !isScrolledOut) {
+                    isScrolledOut = true;
+
+                    words.forEach((word, index) => {
+                        setTimeout(() => {
+                            word.classList.remove('scroll-back');
+                            word.classList.add('scroll-out');
+                        }, index * 40);
+                    });
+
+                    if (paragraph) {
+                        setTimeout(() => {
+                            paragraph.classList.remove('scroll-back');
+                            paragraph.classList.add('scroll-out');
+                        }, words.length * 40 + 200);
+                    }
+
+                    if (button) {
+                        setTimeout(() => {
+                            button.classList.remove('scroll-back');
+                            button.classList.add('scroll-out');
+                        }, words.length * 40 + 400);
+                    }
+
+                } else if (scrollTop <= SCROLL_THRESHOLD && isScrolledOut) {
+                    isScrolledOut = false;
+
+                    if (button) {
+                        button.classList.remove('scroll-out');
+                        button.classList.add('scroll-back');
+                    }
+
+                    setTimeout(() => {
+                        if (paragraph) {
+                            paragraph.classList.remove('scroll-out');
+                            paragraph.classList.add('scroll-back');
+                        }
+                    }, 100);
+
+                    setTimeout(() => {
+                        words.forEach((word, index) => {
+                            setTimeout(() => {
+                                word.classList.remove('scroll-out');
+                                word.classList.add('scroll-back');
+                            }, index * 25);
+                        });
+                    }, 200);
+                }
+            }
+
+            function throttledScroll() {
+                if (animationFrameId) return;
+                
+                animationFrameId = requestAnimationFrame(() => {
+                    handleScroll();
+                    animationFrameId = null;
+                });
+            }
+
+            window.addEventListener('scroll', throttledScroll, { passive: true });
+        }
+
+        // ==================== PHONE MASK ====================
+        function initializePhoneMask() {
+            const phoneInput = document.getElementById('phone');
+            if (!phoneInput) return;
+
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+
+                // Limita a 11 dígitos
+                if (value.length > 11) {
+                    value = value.substring(0, 11);
+                }
+
+                // Aplica máscara
+                if (value.length <= 2) {
+                    value = value.replace(/^(\d{0,2})/, '($1');
+                } else if (value.length <= 7) {
+                    value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+                } else {
+                    value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                }
+
+                e.target.value = value;
+            });
+
+            // Remove máscara ao colar
+            phoneInput.addEventListener('paste', function(e) {
+                setTimeout(() => {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 11) value = value.substring(0, 11);
+                    
+                    if (value.length <= 2) {
+                        value = value.replace(/^(\d{0,2})/, '($1');
+                    } else if (value.length <= 7) {
+                        value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+                    } else {
+                        value = value.replace(/^(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                    }
+                    
+                    e.target.value = value;
+                }, 10);
+            });
+        }
+
+        // ==================== CUSTOM SELECT ====================
+        function initializeCustomSelect() {
+            const select = document.querySelector('.custom-select');
+            if (!select) return;
+
+            const selected = select.querySelector('.selected');
+            const optionsContainer = select.querySelector('.options');
+            const hiddenInput = select.querySelector('input[name="service"]');
+
+            if (!selected || !optionsContainer || !hiddenInput) return;
+
+            // Toggle dropdown
+            selected.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = optionsContainer.style.display === 'block';
+                optionsContainer.style.display = isOpen ? 'none' : 'block';
+                select.classList.toggle('open', !isOpen);
+            });
+
+            // Selecionar opção
+            optionsContainer.querySelectorAll('li').forEach(option => {
+                option.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selected.textContent = option.textContent;
+                    hiddenInput.value = option.dataset.value;
+                    optionsContainer.style.display = 'none';
+                    select.classList.remove('open');
+                    
+                    // Remove erro ao selecionar
+                    removeFieldError(hiddenInput);
+                });
+            });
+
+            // Fecha ao clicar fora
+            document.addEventListener('click', (e) => {
+                if (!select.contains(e.target)) {
+                    optionsContainer.style.display = 'none';
+                    select.classList.remove('open');
+                }
+            });
+
+            // Acessibilidade: fechar com ESC
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && optionsContainer.style.display === 'block') {
+                    optionsContainer.style.display = 'none';
+                    select.classList.remove('open');
+                }
+            });
+        }
+
+        // ==================== FORM VALIDATION ====================
+        function initializeFormValidation() {
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+
+            const submitBtn = document.getElementById('submitBtn');
+            const nameInput = form.querySelector('#name');
+            const emailInput = form.querySelector('#email');
+            const phoneInput = form.querySelector('#phone');
+            const serviceInput = form.querySelector('input[name="service"]');
+            const messageInput = form.querySelector('#message');
+
+            // Regex patterns
+            const patterns = {
+                email: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+                phone: /^\(\d{2}\)\s\d{5}-\d{4}$/,
+                name: /^[a-zA-ZÀ-ÿ\s]{2,}$/
+            };
+
+            // Validação em tempo real (blur)
+            if (nameInput) {
+                nameInput.addEventListener('blur', () => validateField(nameInput, 'name'));
+                nameInput.addEventListener('input', () => {
+                    if (nameInput.classList.contains('error')) {
+                        validateField(nameInput, 'name');
+                    }
+                });
+            }
+
+            if (emailInput) {
+                emailInput.addEventListener('blur', () => validateField(emailInput, 'email'));
+                emailInput.addEventListener('input', () => {
+                    if (emailInput.classList.contains('error')) {
+                        validateField(emailInput, 'email');
+                    }
+                });
+            }
+
+            if (phoneInput) {
+                phoneInput.addEventListener('blur', () => validateField(phoneInput, 'phone'));
+            }
+
+            // Validação do campo
+            function validateField(field, type) {
+                const value = field.value.trim();
+                let isValid = true;
+                let errorMsg = '';
+
+                switch(type) {
+                    case 'name':
+                        if (!value) {
+                            isValid = false;
+                            errorMsg = 'Por favor, informe seu nome';
+                        } else if (value.length < 2) {
+                            isValid = false;
+                            errorMsg = 'Nome muito curto';
+                        } else if (!patterns.name.test(value)) {
+                            isValid = false;
+                            errorMsg = 'Nome inválido';
+                        }
+                        break;
+
+                    case 'email':
+                        if (!value) {
+                            isValid = false;
+                            errorMsg = 'Por favor, informe seu e-mail';
+                        } else if (!patterns.email.test(value)) {
+                            isValid = false;
+                            errorMsg = 'E-mail inválido';
+                        }
+                        break;
+
+                    case 'phone':
+                        const phoneDigits = value.replace(/\D/g, '');
+                        if (!value) {
+                            isValid = false;
+                            errorMsg = 'Por favor, informe seu telefone';
+                        } else if (phoneDigits.length < 10) {
+                            isValid = false;
+                            errorMsg = 'Telefone incompleto';
+                        } else if (phoneDigits.length === 10) {
+                            // Valida formato antigo (XX) XXXX-XXXX
+                            if (!/^\(\d{2}\)\s\d{4}-\d{4}$/.test(value)) {
+                                isValid = false;
+                                errorMsg = 'Formato inválido';
+                            }
+                        } else if (!patterns.phone.test(value)) {
+                            isValid = false;
+                            errorMsg = 'Formato inválido';
+                        }
+                        break;
+                }
+
+                if (isValid) {
+                    removeFieldError(field);
+                } else {
+                    showFieldError(field, errorMsg);
+                }
+
+                return isValid;
+            }
+
+            // Validação geral do formulário
+            function validateForm() {
+                let isValid = true;
+
+                // Valida cada campo
+                if (nameInput && !validateField(nameInput, 'name')) {
+                    isValid = false;
+                }
+
+                if (emailInput && !validateField(emailInput, 'email')) {
+                    isValid = false;
+                }
+
+                if (phoneInput && !validateField(phoneInput, 'phone')) {
+                    isValid = false;
+                }
+
+                // Valida select
+                if (serviceInput) {
+                    const serviceValue = serviceInput.value;
+                    if (!serviceValue || serviceValue === '') {
+                        showFieldError(serviceInput, 'Por favor, selecione um serviço');
+                        isValid = false;
+                    } else {
+                        removeFieldError(serviceInput);
+                    }
+                }
+
+                return isValid;
+            }
+
+            // Submit do formulário
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Remove mensagens antigas
+                const oldMsg = form.querySelector('.form-message');
+                if (oldMsg) oldMsg.remove();
+
+                // Valida formulário
+                if (!validateForm()) {
+                    showFormMessage('Por favor, corrija os erros antes de enviar', 'error');
+                    
+                    // Foca no primeiro campo com erro
+                    const firstError = form.querySelector('.error');
+                    if (firstError && firstError.focus) {
+                        firstError.focus();
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    return;
+                }
+
+                // Desabilita botão para evitar envio duplo
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Enviando...';
+                }
+
+                // Se passou em todas as validações, envia
+                try {
+                    form.submit();
+                } catch (error) {
+                    showFormMessage('Erro ao enviar formulário. Tente novamente.', 'error');
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Enviar Mensagem';
+                    }
+                }
+            });
+
+            // Mensagem de feedback
+            function showFormMessage(text, type) {
+                const msg = document.createElement('div');
+                msg.className = `form-message ${type}`;
+                msg.textContent = text;
+                
+                // Insere antes do botão
+                const submitBtn = form.querySelector('#submitBtn');
+                if (submitBtn) {
+                    submitBtn.parentNode.insertBefore(msg, submitBtn);
+                } else {
+                    form.appendChild(msg);
+                }
+
+                // Scroll suave até a mensagem
+                msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+                // Remove após 5s
+                setTimeout(() => {
+                    msg.remove();
+                }, 5000);
+            }
+        }
+
+        // ==================== INITIALIZE ALL ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initializeHero();
+            initializeObserver();
+            initializeScrollEffects();
+            initializePhoneMask();
+            initializeHeroGlow();
+            initializeCustomSelect();
+            initializeFormValidation();
+        });
+
+    })();
+    </script>
+</body>
+</html>
